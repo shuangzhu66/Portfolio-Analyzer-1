@@ -2,10 +2,44 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from datetime import datetime
-#this is a try
+
 # Page configuration
 st.set_page_config(page_title="Portfolio Analytics", layout="wide")
 
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+
+        [data-testid="stSidebar"] {
+            background: #eff6ff;
+            border-right: 1px solid #bfdbfe;
+        }
+
+        .stMetric [data-testid="stMetricValue"] {
+            color: #2563eb;
+        }
+
+        .stButton > button {
+            background: linear-gradient(90deg, #3b82f6, #06b6d4);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .stTextInput > div > div > input,
+        .stNumberInput > div > div > input {
+            background-color: #ffffff;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+#this is a try
 st.title("📊 Portfolio Analytics Dashboard")
 st.markdown("Calculate portfolio metrics: Expected Return, Variance, Standard Deviation, and Sharpe Ratio")
 
